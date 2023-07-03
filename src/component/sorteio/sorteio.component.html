@@ -1,0 +1,14 @@
+<div>
+  <h2>Sorteio de Amigo Secreto</h2>
+  <div>
+    <input [(ngModel)]="nomeDigitado" placeholder="Digite o seu nome">
+    <button (click)="verificarNome()">Verificar</button>
+  </div>
+
+  <div *ngIf="nomeSorteado">
+    <div class="card">
+      <h3>Nome: {{ nomeSorteado }}</h3>
+      <p>Cor: {{ getCorDoJogador(nomeSorteado) }}</p>
+    </div>
+  </div>
+</div>
